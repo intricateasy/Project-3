@@ -26,7 +26,8 @@ main {
 }
 
 .intro p,
-label {
+label,
+footer {
   color: #5e6265;
 }
 
@@ -47,6 +48,7 @@ legend {
 
 label {
   display: inline-block;
+  width: 90%;
   margin-top: 30px;
 }
 
@@ -80,10 +82,12 @@ input[type="tel"]::placeholder {
 input:focus,
 select:focus,
 textarea:focus {
-  border: 2px solid #46698b;
-  border-radius: 5px;
-  background-color: #eff0f1;
-  color: #46698b;
+  box-shadow: inset 0 0 0 2px #46698b;
+}
+
+#zip {
+  width: 60%;
+  margin-bottom: 40px;
 }
 
 button {
@@ -96,7 +100,37 @@ button {
   margin-top: 20px;
 }
 
+button:hover {
+  background-color: #3a8f8c;
+}
+
 footer {
   font-style: italic;
   text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 12px;
+}
+
+/* Media Queries ---------- */
+
+@media (min-width:768px) {
+  main {
+    width: 60%;
+  }
+
+  .contact_info label {
+    width: 24%;
+  }
+
+  .contact_info input[type="text"],
+  .contact_info input[type="email"],
+  .contact_info input[type="tel"],
+  .contact_info select {
+    width: 75%;
+  }
+
+  #zip {
+    width: 30%;
+  }
 }
